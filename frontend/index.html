@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda en línea</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🛒 Mi Tienda</h1>
+
+  <!-- 🔹 Login y Registro -->
+  <div class="container-form">
+    <!-- Formulario de registro -->
+    <div class="form-box">
+      <h2>Registro</h2>
+      <input type="text" id="regNombre" placeholder="Nombre">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Contraseña">
+      <button id="btnRegistro">Registrarse</button>
+    </div>
+
+    <!-- Formulario de login -->
+    <div class="form-box">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Contraseña">
+      <button id="btnLogin">Iniciar Sesión</button>
+    </div>
+  </div>
+
+  <!-- 🔹 Contenedor principal de la tienda -->
+  <div class="container">
+    <!-- Contenedor de productos -->
+    <div id="productos" class="productos"></div>
+
+    <!-- Ticket lateral -->
+    <div id="ticket" class="ticket">
+      <h2>🧾 Ticket</h2>
+      <ul id="listaTicket"></ul>
+      <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+      <button id="pagarBtn">Pagar</button>
+    </div>
+  </div>
+
+  <!-- 🔹 Scripts  -->
+  <script src="app.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
