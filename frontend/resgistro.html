@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Usuario</title>
+</head>
+<body>
+  <h1>Registro de Usuario</h1>
+  <form id="formRegistro">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="contraseña" placeholder="Contraseña" required>
+    <button type="submit">Registrar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('formRegistro');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const contraseña = document.getElementById('contraseña').value;
+
+      try {
+        const response = await fetch("http://localhost:3000/api/usuarios", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            nombre,
+            email,
+            contraseña
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error("Error al registrar usuario");
+        }
+
+        const data = await response.json();
+        console.log("Usuario registrado:", data);
+
+        alert("Usuario registrado con éxito!");
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Hubo un error al registrar el usuario");
+      }
+    });
+  </script>
+</body>
+</html>
