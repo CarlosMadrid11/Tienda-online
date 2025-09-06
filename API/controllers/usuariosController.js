@@ -34,6 +34,7 @@ export const getUsuariosById = async (req, res) => {
 // Crear un usuario (registro)
 export const createUsuarios = async (req, res) => {
   try {
+    
     console.log("Request body:", req.body);
 
     const { nombre, email, contraseña } = req.body;

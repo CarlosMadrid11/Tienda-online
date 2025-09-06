@@ -7,12 +7,10 @@ import productosRouter from './routes/productos.js';
 import usuarioRouter from './routes/usuarios.js';
 import pedidosRouter from './routes/pedidos.js';
 import detallePedidosRouter from './routes/detallePedidos.js';
-// filepath: /Users/carlosmadrid11/Dev/store/API/app.js
-// ...existing code...
-import usuariosRouter from './routes/usuarios.js';
+
 
 const app = express();  // Moved this line up 
-app.use('/api/usuarios', usuariosRouter);
+
 // ...existing code...
 dotenv.config();
 
@@ -28,9 +26,15 @@ app.use(cors());
 // O si quieres restringir solo al frontend (Live Server por ejemplo):
 // app.use(cors({ origin: "http://127.0.0.1:5500" }));
 
+app.use((req, res, next) => {
+  res.setHeader("Referrer-Policy", "no-referrer"); // o "origin"
+  next();
+});
+
+
 // Rutas
 app.use('/api/productos', productosRouter);
-//app.use('/api/usuarios', usuarioRouter); tal vez este es el problema
+app.use('/api/usuarios', usuarioRouter); 
 app.use('/api/pedidos', pedidosRouter);
 app.use('/api/detallePedidos', detallePedidosRouter);
 

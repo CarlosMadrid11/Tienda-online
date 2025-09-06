@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+export const supabase = createClient(process.env.SUPABASE_URL, process.env.SERVICE_ROL);
 
 // Asegúrate de que las variables de entorno estén definidas
 if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY) {
