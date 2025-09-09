@@ -1,0 +1,91 @@
+.registro-form {
+  font-size: 20px; /* Font size of the text within the inputs and buttons */
+  padding: 20px; /* Spacing between the inputs and buttons */
+  width: 70%; /* Increase the width of the form elements to 70% of the parent container's width */
+}
+  body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f8f8f8;
+}
+
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+a {
+    margin: 0; /* Elimina el margen por defecto del h1 */
+    font-size: 30px; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: white; /* Color blanco para el texto */
+  }
+
+body {
+  display: flex; /* Converts the body into a Flexbox container */
+  justify-content: center; /* Centers the content horizontally on the main axis */
+  align-items: center; /* Centers the content vertically on the cross axis */
+  min-height: 100vh; /* Ensures the body occupies the full height of the viewport for proper vertical centering */
+  margin: 40; /* Removes default browser margins */
+    padding-left: 30%; /* Adds padding to the left */
+}
+
+header{
+    background-color: rgb(41, 41, 197); /* Color azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 28px; /* Reduce el padding para hacerlo más compacto */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*hacer que el header se quede hasta arriba*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de
+    otros elementos */
+     /*agregar espacio entre el header y el contenido*/
+    margin-bottom: 80px; /* Espacio igual a la altura del header */
+}
+.registro-form h2 {
+  color: black;
+}
+h1 {
+    margin: 0; /* Elimina el margen por defecto del h1 */
+    font-size: 30px; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: white; /* Color blanco para el texto */
+  }
+a{
+    color: white; /* Color blanco para el enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 18px; /* Tamaño de fuente para el enlace */
+  
+}
+header a:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el cursor sobre el enlace */
+  }

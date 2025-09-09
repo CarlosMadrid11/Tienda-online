@@ -1,12 +1,10 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
   background: #f8f8f8;
 }
 
-h1 {
-  color: #333;
-}
 
 #productos {
   display: grid;
@@ -33,3 +31,38 @@ button {
 button:hover {
   background: #0056b3;
 }
+
+body {
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 10; /* Elimina el padding por defecto del body */
+}
+
+header{
+    background-color: rgb(41, 41, 197); /* Color azul oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 28px; /* Reduce el padding para hacerlo más compacto */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1,a {
+    margin: 0; /* Elimina el margen por defecto del h1 */
+    font-size: 30px; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: white; /* Color blanco para el texto */
+  }
+
+  header a {
+    color: white; /* Color blanco para el enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 18px; /* Tamaño de fuente para el enlace */
+  }
+
+  div.contenido {
+    margin-left: 50px; /* Espacio interno para el contenido */
+  }
+  

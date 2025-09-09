@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro Usuario</title>
-</head>
+  <header class="registro">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+    <h1>🛒 Mi Tienda</h1>
+    <a href="index.html">Inicio</a>
+    <link rel="stylesheet" href="Style2.css">
+  </header>
+
 <body>
-  <h1>Registro de Usuario</h1>
-  <form id="formRegistro">
-    <input type="text" id="nombre" placeholder="Nombre" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="contraseña" placeholder="Contraseña" required>
-    <button type="submit">Registrar</button>
-  </form>
+    <form id="formRegistro" class="registro-form">
+      <h2>Registro de Usuario</h2>
+      <input type="text" id="nombre" placeholder="Nombre" required><br>
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="contraseña" placeholder="Contraseña" required><br>
+      <button type="submit">Registrar</button><br>
+    </form>
 
   <script>
     const form = document.getElementById('formRegistro');
@@ -36,7 +40,7 @@
             contraseña
           })
         });
-
+ 
         if (!response.ok) {
           throw new Error("Error al registrar usuario");
         }
