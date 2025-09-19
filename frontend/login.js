@@ -46,6 +46,15 @@ document.getElementById("btnLogin").addEventListener("click", async () => {
     return;
   }
 
+  if (!email.includes("@")) {
+    alert("El correo no es válido");
+    return;
+  }
+  if (password.length < 8) {
+    alert("La contraseña debe tener al menos 8 caracteres");
+    return;
+  }
+
   try {
     const response = await fetch(`${API_URL}/API/usuarios`);
     if (!response.ok) throw new Error("Error al consultar usuarios");
